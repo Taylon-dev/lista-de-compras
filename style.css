@@ -1,0 +1,42 @@
+/* Estilo para o logo */
+.logo {
+
+  display: flex;
+  gap: 0.520625rem;
+  align-items: center;
+  padding-top: 1.5625rem;
+  padding-bottom: 3.875rem;
+  justify-content: center;
+
+  & span {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 1.666875rem; 
+  }
+
+  & .img-logo {
+    background-image: url(./assets/img-logo.svg);
+    width: 1.906875rem;
+    height: 1.458125rem;
+  }
+  
+}
+
+/* Estilo para a navegação */
+nav {
+
+  padding-bottom: 1rem;
+
+  & span {
+    font: var(--link);
+    color: var(--color-brand);
+  }
+}
+
+/* Estilo para o título */
+h2 {
+  font: var(--title);
+  color: var(--content-primary);
+  margin-bottom: 2.75rem;
+}
+
