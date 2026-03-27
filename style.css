@@ -40,3 +40,40 @@ h2 {
   margin-bottom: 2.75rem;
 }
 
+.add_item {
+  all: unset;
+  box-sizing: border-box;
+  width: 28.1875rem;
+  height: 2.75rem;
+  border: 0.25rem solid var(--border-primary);
+  border-radius: 0.75rem;
+  background-color: var(--background-secondary);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 140%;
+  letter-spacing: 0;
+  padding-inline: 1.125rem;
+  margin-right: 0;
+
+  &:hover {
+    border-color: var(--border-hover);
+  }
+
+  &:focus, &:active{
+    border-color: var(--color-brand);
+  }
+  
+}
+
+.button {
+  all:unset;
+  box-sizing: border-box;
+  width: 10rem;
+  height: 2.75rem;
+  background-color: var(--color-brand);
+  border-radius: 0.75rem;
+  color: var(--always-white);
+  font: var(--label);
+  padding-inline: 1.5rem;
+}
+
