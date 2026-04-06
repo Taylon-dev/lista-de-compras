@@ -43,6 +43,27 @@ add_item.addEventListener('input', () => {
   add_item.value = add_item.value.replace(/[^A-Za-zÀ-ÿ\s]/g, '');
 });
 
-console.log(itemNames)
+// Remover item da lista
+list.addEventListener('click', (event) => {
+  const removeLink = event.target.closest('a');
+  if (!removeLink) return;
+
+  const itemLi = removeLink.closest('li');
+  if (!itemLi) return;
+
+  const itemSpan = itemLi.querySelector('span');
+  const itemText = itemSpan ? itemSpan.textContent : null;
+
+  if (itemText) {
+    const itemIndex = itemNames.indexOf(itemText);
+    if (itemIndex !== -1) {
+      itemNames.splice(itemIndex, 1);
+    }
+  }
+
+  itemLi.remove();
+  console.log(itemNames);
+});
+
 
 
