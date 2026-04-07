@@ -11,6 +11,15 @@ button.addEventListener('click', (event) => {
   const itemName = add_item.value.trim();
   if (!itemName) return;
 
+  // Verificar se o item já existe na lista (case-insensitive)
+  const itemExists = itemNames.some(item => item.toLowerCase() === itemName.toLowerCase());
+  
+  if (itemExists) {
+    alert(`"${itemName}" já está na lista de compras!`);
+    add_item.value = '';
+    return;
+  }
+
   itemNames.push(itemName);
   console.log(itemNames)
 
@@ -64,6 +73,9 @@ list.addEventListener('click', (event) => {
   itemLi.remove();
   console.log(itemNames);
 });
+
+// Impedir repetição de itens na lista
+
 
 
 
