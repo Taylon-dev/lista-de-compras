@@ -130,7 +130,37 @@ h2 {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
+.removed-item {
+  margin-top: 2.25rem;
+  display: flex;
+  gap: 0.5rem;
+  background-color: var(--color-danger);
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  align-items: center;
+  padding-inline: 0.75rem;
 
+  & .removed-item-img {
+    background-image: url(./assets/removed-item-img.svg);
+    width: 1.25rem;
+    height: 1.25rem;
+
+  }
+
+  & span {
+    width: 34.1875rem;
+    font: var(--label);
+    color: var(--always-white);
+    
+    
+  }
+
+  & .removed-item-delete-msg {
+    background-image: url(./assets/removed-item-delete-msg.svg);
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}

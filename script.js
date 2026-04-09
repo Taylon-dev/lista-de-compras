@@ -1,6 +1,8 @@
 const add_item = document.getElementById('add_item');
 const button = document.getElementById('button');
 const list = document.getElementById('list');
+const removedItemMessage = document.querySelector('.removed-item');
+const removedItemCloseButton = document.querySelector('.removed-item-delete-msg');
 
 const itemNames = []; // Lista de nomes dos itens adicionados
 
@@ -71,10 +73,23 @@ list.addEventListener('click', (event) => {
   }
 
   itemLi.remove();
+
+  if (removedItemMessage) {
+    removedItemMessage.classList.remove('hidden');
+  }
+
   console.log(itemNames);
 });
 
-// Impedir repetição de itens na lista
+if (removedItemCloseButton && removedItemMessage) {
+  removedItemCloseButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    removedItemMessage.classList.add('hidden');
+  });
+}
+
+
+
 
 
 
